@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .item{
+            height: 100px;
+            width: 100px;
+            display:table-cell;
+            border: 1px solid;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 24px;
+            color: #fff;
+        }
+        .from{
+            background:#fef;
+        }
+        .to{
+            background: #181;
+        }
+    </style>
+    <script src="mmColorGrad.js"></script>
+</head>
+<body>
+    <div class="item from">from</div>
+    <div class="item target">target</div>
+    <div class="item to">to</div>
+    <script>
+        var targetColor=mmColorGrad("rgba(250,130,240,1)","rgba(180,180,180,.4)",.8,"hex");
+        console.log(targetColor);
+        targetColor=mmColorGrad("rgb(250,130,240)","rgb(180,180,180)",.8,"hex");
+        console.log(targetColor);
+        targetColor=mmColorGrad("rgb(250,130,240)","rgba(180,180,180,.4)",.8,"hex");
+        console.log(targetColor);
+        targetColor=mmColorGrad("rgba(250,130,240,1)","rgba(180,180,180,.4)",.8,"rgb");
+        console.log(targetColor);
+        targetColor=mmColorGrad("rgb(250,130,240)","rgb(180,180,180)",.8,"rgb");
+        console.log(targetColor);
+        targetColor=mmColorGrad("rgb(250,130,240)","rgba(180,180,180,.4)",.8,"rgb");
+        console.log(targetColor);
+        targetColor=mmColorGrad("#FFE","rgba(180,180,180,.4)",.8,"hex");
+        console.log(targetColor);
+        targetColor=mmColorGrad("#eeeeee","rgb(180,180,180)",.8,"hex");
+        console.log(targetColor);
+        targetColor=mmColorGrad("#fef","#181",.7,"hex");
+        console.log(targetColor);
+        document.querySelector(".target").style.backgroundColor=targetColor;
+    </script>
+</body>
+</html>
